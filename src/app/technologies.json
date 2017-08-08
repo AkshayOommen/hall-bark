@@ -1,0 +1,13 @@
+[{
+	"techId": 1,
+	"techName": "AngularJS"
+}, {
+	"techId": 2,
+	"techName": "Javascript"
+}, {
+	"techId": 3,
+	"techName": "HTML"
+}, {
+	"techId": 4,
+	"techName": "CSS"
+}]

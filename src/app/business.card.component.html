@@ -1,0 +1,8 @@
+<section class='card-style'>
+	<h3>{{name}}</h3>
+	<h4>({{designation}})</h4>
+	<p>{{description}}</p>
+	<ul *ngFor = 'let skill of skills'>
+		<li>{{skill.techName}}</li>
+	</ul>
+</section>
