@@ -1,8 +1,15 @@
-<section class='card-style'>
-	<h3>{{name}}</h3>
-	<h4>({{designation}})</h4>
-	<p>{{description}}</p>
-	<ul *ngFor = 'let skill of skills'>
-		<li>{{skill.techName}}</li>
-	</ul>
+<section class='business-card-container'>
+	<aside class='company-info'>
+		<p class='name'>AGAMBO</p>
+		<p class='slogan'>Elevate to greatness</p>
+	</aside>
+	<section class='employee-info'>
+		<span class='name'>{{name}}</span>
+		<span class='designation'>{{designation}}</span>
+		<section class='contact-details'>
+				<span>{{phone}}</span>
+				<span>{{email}}</span>
+				<span>{{officeAddress}}</span>
+		</section>
+	</section>
 </section>

@@ -13,7 +13,9 @@ export class BusinessCardComponent {
 	skills: Technology[];
 	name: string = 'Akshay Oommen';
 	designation: string = 'Senior Software Engineer';
-	description: string = 'He likes music.';
+	phone: string = '(+91) 1234567890';
+	email: string = 'akshay_oommen@agambo.com';
+	officeAddress: string = 'Agambo Offices, 123 Boulevard, Le Rouge, Blippy';
 
 	// make the constructor call second
 	constructor(private _technologyService: TechnologyService) {}
