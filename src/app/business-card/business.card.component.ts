@@ -1,16 +1,17 @@
 import { Component, Input } from '@angular/core';
-import { Technology } from './Technology';
-import { TechnologyService } from './technology.service';
+import { Employee } from '../shared/interfaces/Employee';
+import { Technology } from '../shared/interfaces/Technology';
+import { TechnologyService } from '../shared/services/technology.service';
 
 @Component({
 	selector: 'business-card',
-	templateUrl: 'app/business.card.component.html',
+	templateUrl: 'app/business-card/business.card.component.html',
 	providers: [TechnologyService]
 })
 	
 export class BusinessCardComponent {
 	// declare or initialize component properties first
-	// skills: Technology[];
+	skills: Technology[];
 	// name: string = 'Akshay Oommen';
 	// designation: string = 'Senior Software Engineer';
 	// phone: string = '(+91) 1234567890';

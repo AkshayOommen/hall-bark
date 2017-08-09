@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Technology } from './Technology';
+import { Technology } from '../interfaces/Technology';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class TechnologyService {
-	private _url = 'app/technologies.json';
+	private _url = 'app/shared/jsons/technologies.json';
 	constructor(private _http: Http) {}
 
 	getTechnologies(): Observable<Technology[]> {
