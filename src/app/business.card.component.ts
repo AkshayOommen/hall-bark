@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Technology } from './Technology';
 import { TechnologyService } from './technology.service';
 
@@ -10,12 +10,12 @@ import { TechnologyService } from './technology.service';
 	
 export class BusinessCardComponent {
 	// declare or initialize component properties first
-	skills: Technology[];
-	name: string = 'Akshay Oommen';
-	designation: string = 'Senior Software Engineer';
-	phone: string = '(+91) 1234567890';
-	email: string = 'akshay_oommen@agambo.com';
-	officeAddress: string = 'Agambo Offices, 123 Boulevard, Le Rouge, Blippy';
+	// skills: Technology[];
+	// name: string = 'Akshay Oommen';
+	// designation: string = 'Senior Software Engineer';
+	// phone: string = '(+91) 1234567890';
+	// email: string = 'akshay_oommen@agambo.com';
+	@Input() employee: Employee;
 
 	// make the constructor call second
 	constructor(private _technologyService: TechnologyService) {}

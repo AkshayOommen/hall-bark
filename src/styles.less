@@ -1,0 +1,80 @@
+/* Imported fonts */
+
+@font-face {
+	font-family: 'klavikaboldwebfont';
+	src: url('./klavikaboldwebfont.woff');
+}
+
+* {
+	font-family: 'klavikaboldwebfont';
+}
+
+/* Variables */
+
+@maincolor: maroon;
+@sidecolor: navajowhite;
+
+/* Selectors */
+
+.business-card-container {
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px #888888;
+    display: block;
+    height: 200px;
+    padding: 5px;
+    width: 375px;
+
+    .company-info {
+        color: @sidecolor;
+        display: inline-block;
+        background-color: @maincolor;
+        height: inherit;
+        margin-left: 40px;
+        width: 90px;
+
+        .name {
+            margin-top: 65px;
+            font-size: xx-large;
+            transform: rotate(-90deg);
+        }
+
+        .slogan {
+            margin-left: -60px;
+            text-align: right;
+            transform: rotate(-90deg);
+            width: 265px;
+        }
+    }
+
+    .employee-info {
+        display: inline-block;
+        float: right;
+        height: inherit;
+        width: 225px;
+
+        .name {
+            display: inline-block;
+            font-size: x-large;
+            width: inherit;
+        }
+
+        .designation {
+            color: @maincolor;
+            display: inline-block;
+            width: inherit;
+        }
+    }
+
+    .contact-details {
+        display: inline-block;
+        font-size: small;
+        height: 100px;
+        padding-top: 20px;
+        width: inherit;
+
+        span {
+            display: inline-block;
+            padding-top: 5px;
+        }
+    }
+}
