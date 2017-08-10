@@ -1,8 +1,12 @@
 <section style='text-align: center; margin: 10px'>
-	<a class='button' (click)='onBack()'>Go to Greeting Cards</a>
+	<!-- <a class='button' (click)='onBack()'>Go to Greeting Cards</a> -->
 </section>
 <section class='card-container'>
 	<div *ngFor='let employee of _employees'>
-		<business-card [employee]="employee"></business-card>
+		<business-card [employee]="employee" [isAddIcon]='false'></business-card>
 	</div>
+	<business-card [employee]="employee" [isAddIcon]='true' (click)='onAdd()'></business-card>
+</section>
+<section *ngIf='isFormVisible'>
+	<employee-form (isFormVisibleChanged)='cancelForm($event)'></employee-form>
 </section>

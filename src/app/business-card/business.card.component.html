@@ -1,9 +1,10 @@
 <section class='business-card-container'>
-	<aside class='company-info'>
+ 	<aside class='company-info' *ngIf='!isAddIcon'>
 		<p class='name'>AGAMBO</p>
 		<p class='slogan'>Elevate to greatness</p>
+		<i class='fa fa-hand-peace-o fa-3x'></i>
 	</aside>
-	<section class='employee-info'>
+	<section class='employee-info' *ngIf='!isAddIcon'>
 		<span class='name'>{{employee.name}}</span>
 		<span class='designation'>{{employee.designation}}</span>
 		<section class='contact-details'>
@@ -11,5 +12,8 @@
 				<span>{{employee.email}}</span>
 				<span>Agambo Offices, 123 Boulevard, Le Rouge, Blippy</span>
 		</section>
+	</section>
+	<section class='add-background' *ngIf='isAddIcon'>
+		<div class='fa fa-user-plus fa-5x add-icon'></div>
 	</section>
 </section>

@@ -12,12 +12,10 @@ import { TechnologyService } from '../shared/services/technology.service';
 export class BusinessCardComponent {
 	// declare or initialize component properties first
 	skills: Technology[];
-	// name: string = 'Akshay Oommen';
-	// designation: string = 'Senior Software Engineer';
-	// phone: string = '(+91) 1234567890';
-	// email: string = 'akshay_oommen@agambo.com';
-	@Input() employee: Employee;
 
+	@Input() employee: Employee;
+	@Input() isAddIcon: boolean;
+	
 	// make the constructor call second
 	constructor(private _technologyService: TechnologyService) {}
 

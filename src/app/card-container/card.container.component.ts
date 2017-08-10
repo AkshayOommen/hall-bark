@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class CardContainerComponent {
 	private _employees: Employee[];
 
+	isFormVisible: boolean = false;
+
 	constructor(private _employeeService: EmployeeService, private _router: Router) {}
 
 	ngOnInit(): void {
@@ -21,5 +23,13 @@ export class CardContainerComponent {
 
 	onBack(): void {
 		this._router.navigate(['/greeting-card']);
+	}
+
+	onAdd(): void {
+		this.isFormVisible = true;
+	}
+
+	cancelForm(isFormVisible: boolean): void {
+		this.isFormVisible = isFormVisible;
 	}
 }
