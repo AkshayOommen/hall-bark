@@ -8,5 +8,5 @@
 	<business-card [employee]="employee" [isAddIcon]='true' (click)='onAdd()'></business-card>
 </section>
 <section *ngIf='isFormVisible'>
-	<employee-form (isFormVisibleChanged)='cancelForm($event)'></employee-form>
+	<employee-form (isFormVisibleChanged)='cancelForm($event)' (isNewEmployeeAdded)='addEmployee($event)'></employee-form>
 </section>

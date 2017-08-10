@@ -32,4 +32,8 @@ export class CardContainerComponent {
 	cancelForm(isFormVisible: boolean): void {
 		this.isFormVisible = isFormVisible;
 	}
+
+	addEmployee(employee: Employee): void {
+		this._employees.push(employee);
+	}
 }

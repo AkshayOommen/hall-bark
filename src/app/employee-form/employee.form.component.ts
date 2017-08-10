@@ -10,8 +10,15 @@ export class EmployeeFormComponent {
 	model = new Employee();
 
 	@Output() isFormVisibleChanged: EventEmitter<boolean> = new EventEmitter<boolean>;
+	@Output() isNewEmployeeAdded: EventEmitter<Employee> = new EventEmitter<Employee>;
 
 	onCancel(): void {
 		this.isFormVisibleChanged.emit(false);
+	}
+
+	onSubmit(): void {
+		this.isNewEmployeeAdded.emit(this.model);
+		this.isFormVisibleChanged.emit(false);
+		this.model = new Employee();
 	}
 }
