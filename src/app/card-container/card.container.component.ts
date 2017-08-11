@@ -33,7 +33,11 @@ export class CardContainerComponent {
 		this.isFormVisible = isFormVisible;
 	}
 
-	addEmployee(employee: Employee): void {
+	addBusinessCard(employee: Employee): void {
 		this._employees.push(employee);
+	}
+
+	deleteBusinessCard(dataIndex: any): void {
+		this._employees.splice(dataIndex, 1);
 	}
 }

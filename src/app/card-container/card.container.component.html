@@ -2,11 +2,17 @@
 	<!-- <a class='button' (click)='onBack()'>Go to Greeting Cards</a> -->
 </section>
 <section class='card-container'>
-	<div *ngFor='let employee of _employees'>
-		<business-card [employee]="employee" [isAddIcon]='false'></business-card>
-	</div>
-	<business-card [employee]="employee" [isAddIcon]='true' (click)='onAdd()'></business-card>
+	<business-card *ngFor='let employee of _employees; let i=index ' 
+	[dataIndex]='i'
+	[employee]='employee'
+	[isAddIcon]='false'
+	(isBusinessCardDeleted)='deleteBusinessCard($event)'>
+	</business-card>
+	<business-card [employee]="employee" 
+	[isAddIcon]='true' 
+	(click)='onAdd()'>	
+	</business-card>
 </section>
 <section *ngIf='isFormVisible'>
-	<employee-form (isFormVisibleChanged)='cancelForm($event)' (isNewEmployeeAdded)='addEmployee($event)'></employee-form>
+	<employee-form (isFormVisibleChanged)='cancelForm($event)' (isNewEmployeeAdded)='addBusinessCard($event)'></employee-form>
 </section>

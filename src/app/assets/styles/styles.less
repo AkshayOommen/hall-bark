@@ -32,12 +32,28 @@
     cursor: pointer;
     width: 375px;
 
+    .control-panel {
+        display: inline-block;
+        float: left;
+        height: inherit;
+        text-align: center;
+        width: 30px;
+
+        .delete-icon {
+            color: gray;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
     .company-info {
         color: @sidecolor;
         display: inline-block;
         background-color: @maincolor;
         height: inherit;
-        margin-left: 40px;
+        margin-left: 10px;
         width: 90px;
 
         .name {
@@ -95,16 +111,17 @@
 
     .add-background {
         .add-icon {
+            color: gray;
             display: block;
             margin-top: 75px;
             margin: 50px auto;
             text-align: center;
             width: 50%;
-        }
 
-        .add-icon:hover {
-            color: gray;
-        }  
+            &:hover {
+                color: black;
+            }  
+        }
     }
 }
 

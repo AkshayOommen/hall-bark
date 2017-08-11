@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
-    "build": "concurrently \"tsc -p src/\" \"less-watch-compiler src/app/assets/styles/ src/app/assets/styles/ styles.less\"",
+    "build": "concurrently \"tsc -p src/\"",
     "build:watch": "concurrently \"tsc -p src/ -w\" \"less-watch-compiler src/app/assets/styles/ src/app/assets/styles/ styles.less\"",
     "build:e2e": "tsc -p e2e/",
     "serve": "lite-server -c=bs-config.json",

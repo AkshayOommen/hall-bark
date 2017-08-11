@@ -1,4 +1,7 @@
-<section class='business-card-container'>
+<section class='business-card-container' (mouseover)='setIconVisibility(true)' (mouseleave)='setIconVisibility(false)'>
+	<aside class='control-panel' [style.visibility]='isControlPanelVisible? "visible": "hidden"'>
+		<div class='fa fa-trash fa-2x delete-icon' (click)='deleteBusinessCard()' *ngIf='!isAddIcon'></div>	
+	</aside>
  	<aside class='company-info' *ngIf='!isAddIcon'>
 		<p class='name'>AGAMBO</p>
 		<p class='slogan'>Elevate to greatness</p>
